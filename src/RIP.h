@@ -16,11 +16,11 @@ namespace rip
 	
 	namespace settings
 	{
-		static bool random = true;
-		static bool retrieve = true;
-		static double random_chance = 0.3;
-		static std::string api_endpoint = "http://fojam.users.sourceforge.net/api/inputprank";
-		static std::vector<std::string> phrases = std::vector<std::string>();
-		static long long refresh_interval = 300000;
+		extern bool random;
+		extern bool retrieve;
+		extern double random_chance;
+		extern std::string api_endpoint;
+		extern std::vector<std::string> phrases;
+		extern long long refresh_interval;
 	}
 }

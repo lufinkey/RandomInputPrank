@@ -5,6 +5,7 @@
 #include "posixtime.h"
 #include <INIReader.h>
 #include <rapidjson/document.h>
+#include <iostream>
 #include <iomanip>
 #include <sstream>
 #include <ShlObj.h>
@@ -105,5 +106,16 @@ namespace rip
 				settings::refresh_interval = 1000;
 			}
 		}
+		else
+		{
+			std::cerr << "error reading settings.ini" << std::endl;
+		}
 	}
+
+	bool settings::random = true;
+	bool settings::retrieve = true;
+	double settings::random_chance = 0.3;
+	std::string settings::api_endpoint = "http://fojam.users.sourceforge.net/api/inputprank";
+	std::vector<std::string> settings::phrases = std::vector<std::string>();
+	long long settings::refresh_interval = 300000;
 }

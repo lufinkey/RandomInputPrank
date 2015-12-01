@@ -49,3 +49,6 @@ Temporary Items
 # Visual Studio Build Directories
 Debug/
 Release/
+
+# rip binary
+install/rip.exe
