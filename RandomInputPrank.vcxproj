@@ -19,13 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="external\inih\cpp\INIReader.cpp" />
+    <ClCompile Include="external\inih\ini.c" />
     <ClCompile Include="src\KeyTyper.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MessageRetriever.cpp" />
+    <ClCompile Include="src\posixtime.cpp" />
+    <ClCompile Include="src\RIP.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="external\inih\cpp\INIReader.h" />
+    <ClInclude Include="external\inih\ini.h" />
     <ClInclude Include="src\KeyTyper.h" />
     <ClInclude Include="src\MessageRetriever.h" />
+    <ClInclude Include="src\posixtime.h" />
+    <ClInclude Include="src\RIP.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{87AD5CD5-347E-4850-B5B1-26B5AAF1FE37}</ProjectGuid>
@@ -80,12 +88,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>rip</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>rip</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -98,7 +108,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/rapidjson/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/rapidjson/include;external/inih/cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,10 +139,10 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>external/rapidjson/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>external/rapidjson/include;external/inih/cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>

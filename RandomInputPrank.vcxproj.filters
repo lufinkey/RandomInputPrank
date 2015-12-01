@@ -4,6 +4,15 @@
     <Filter Include="src">
       <UniqueIdentifier>{16763808-b16c-43de-b07c-fde619269146}</UniqueIdentifier>
     </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{223875c8-896b-48a8-9b8a-cbb56ac51e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\inih">
+      <UniqueIdentifier>{71f5788a-8bb3-4191-acc4-5a2a238b5a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\inih\cpp">
+      <UniqueIdentifier>{33d2cfcc-bc07-4d77-92e3-29fccd5cbc90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -15,12 +24,36 @@
     <ClCompile Include="src\MessageRetriever.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="external\inih\cpp\INIReader.cpp">
+      <Filter>external\inih\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RIP.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\inih\ini.c">
+      <Filter>external\inih</Filter>
+    </ClCompile>
+    <ClCompile Include="src\posixtime.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\KeyTyper.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\MessageRetriever.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\inih\cpp\INIReader.h">
+      <Filter>external\inih\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RIP.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\inih\ini.h">
+      <Filter>external\inih</Filter>
+    </ClInclude>
+    <ClInclude Include="src\posixtime.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
