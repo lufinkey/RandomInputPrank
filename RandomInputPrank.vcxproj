@@ -35,6 +35,9 @@
     <ClInclude Include="src\posixtime.h" />
     <ClInclude Include="src\RIP.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RandomInputPrank.rc" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{87AD5CD5-347E-4850-B5B1-26B5AAF1FE37}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
