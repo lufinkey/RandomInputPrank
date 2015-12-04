@@ -1,22 +1,28 @@
 <?php
 
+if(isset($_SERVER['HTTP_ORIGIN']) && !empty($_SERVER['HTTP_ORIGIN']))
+{
+	header('Access-Control-Allow-Origin: '.$_SERVER['HTTP_ORIGIN']);
+	header('Access-Control-Allow-Methods: GET, POST');
+}
+
 $maxentries = 1000;
 $csv_path = "msgs.csv";
 
-if(!isset($_GET["cpu_name"]) || !isset($_GET["msg"]))
+if(!isset($_POST["cpu_name"]) || !isset($_POST["msg"]))
 {
 	header('Content-Type: application/json');
-	echo "null";
+	echo "{\"error\":\"you must provide a cpu_name and a msg\"}";
 	exit();
 }
 
-$cpu_name = $_GET["cpu_name"];
-$msg = $_GET["msg"];
+$cpu_name = $_POST["cpu_name"];
+$msg = $_POST["msg"];
 
 if(strlen($cpu_name)==0 || strlen($msg)==0)
 {
 	header('Content-Type: application/json');
-	echo "false";
+	echo "{\"error\":\"empty input is not allowed\"}";
 	exit();
 }
 
@@ -36,7 +42,7 @@ function mutex_lock($giveup=14)
 	if($mutex_handle==false)
 	{
 		header('Content-Type: application/json');
-		echo "false";
+		echo "{\"error\":\"unable to queue message. Server may be under heavy load\"}";
 		exit();
 	}
 }

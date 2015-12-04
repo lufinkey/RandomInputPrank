@@ -1,0 +1,60 @@
+body {
+	margin: 0 0;
+	padding: 0 0;
+	width: 100%;
+}
+.main {
+	margin: 0 0;
+	padding: 0 0;
+	width: 100%;
+	text-align: center;
+}
+.prank-form {
+	display: inline-block;
+	padding: 0.6em 1em;
+	margin: 1em 1em;
+	border: 1px solid lightgray;
+	box-sizing: border-box;
+}
+.prank-form h1 {
+	font-size: 1.4em;
+	margin-top: 0.2em;
+	margin-bottom: 0.5em;
+	padding: 0 0;
+	text-align: center;
+}
+.prank-form .field {
+	margin-top: 0.4em;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+	-webkit-justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.prank-form .field label {
+	display: inline-block;
+	margin-right: 1em;
+}
+.prank-form .field label::after {
+	content: ":";
+}
+.prank-form .field input {
+	display: inline-block;
+}
+.prank-form .submit-field {
+	margin-top: 0.4em;
+	width: 100%;
+}
+#prank-submit {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#prank-spinner {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
